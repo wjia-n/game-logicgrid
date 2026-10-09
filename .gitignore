@@ -46,3 +46,6 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+# Media-generation scratch (raw logo sources, not shipped)
+assets_raw/
