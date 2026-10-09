@@ -172,7 +172,7 @@ class _Csp {
   final int n; // houses
   final int varCount;
   final List<Clue> clues;
-  final int nodeBudget;
+  static const int nodeBudget = 20000;
   int nodes = 0;
   int solutions = 0;
 
@@ -180,7 +180,6 @@ class _Csp {
     required this.n,
     required this.varCount,
     required this.clues,
-    this.nodeBudget = 20000,
   });
 
   int _fullMask() => (1 << n) - 1;

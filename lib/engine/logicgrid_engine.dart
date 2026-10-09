@@ -231,7 +231,7 @@ class LogicGridEngine extends ChangeNotifier {
   List<_Mark> _closure(List<_Mark> seeds) {
     final scratch = [
       for (int c = 0; c < nc; c++)
-        [for (int v = 0; v < n) List<int>.of(grid[c][v])]
+        List<List<int>>.generate(n, (v) => List<int>.of(grid[c][v])),
     ];
     final marks = <_Mark>[];
     final pending = [...seeds];
