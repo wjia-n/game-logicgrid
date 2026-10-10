@@ -41,7 +41,7 @@ class DetectiveSettings extends ChangeNotifier {
   double volume = 0.8;
   String themeId = 'classic';
   int markStyle = 0;
-  bool isPro = false;
+  bool isPro = true; // everything unlocked — no Pro version
 
   // --- Profile (single JSON) ---
   String detectiveName = defaultName;
@@ -156,7 +156,7 @@ class DetectiveSettings extends ChangeNotifier {
 
     themeId = p.getString(_kTheme) ?? 'classic';
     markStyle = (p.getInt(_kMarks) ?? 0).clamp(0, 7);
-    isPro = p.getBool(_kIsPro) ?? false;
+    isPro = true; // everything unlocked
     for (final k in _defaultCustomColors.keys) {
       customColors[k] =
           p.getInt('$_kCustomPrefix$k') ?? _defaultCustomColors[k]!;
